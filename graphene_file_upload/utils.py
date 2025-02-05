@@ -29,7 +29,7 @@ def add_file_to_operations(operations, file_obj, path):
     """Handles the recursive algorithm for adding a file to the operations
     object"""
     if not path:
-        if operations is not None:
+        if operations:
             raise ValueError('Path in map does not lead to a null value')
         return file_obj
     if isinstance(operations, dict):
